@@ -1,8 +1,6 @@
-import { ButtonHTMLAttributes, FC } from "react";
+import { ComponentPropsWithoutRef, FC } from "react";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  children: string | number | JSX.Element | (string | number | JSX.Element)[];
-}
+interface ButtonProps extends ComponentPropsWithoutRef<"button"> {}
 
 export const Button: FC<ButtonProps> = ({ children, ...props }) => {
   return <button {...props}>{children}</button>;

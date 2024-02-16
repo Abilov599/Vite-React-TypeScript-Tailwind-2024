@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { ComponentPropsWithoutRef, FC } from "react";
 import { Todo } from "../../types/todo";
 import { Button } from "..";
 
-interface TodoSummaryProps {
+interface TodoSummaryProps extends ComponentPropsWithoutRef<"div"> {
   todos: Todo[];
   deleteAllCompleted: () => void;
 }

@@ -1,13 +1,13 @@
-import { FC, MouseEventHandler } from "react";
+import { ComponentPropsWithoutRef, FC, MouseEventHandler } from "react";
 import { Todo } from "../../types/todo";
 import { Button } from "../";
 import { Trash2 } from "lucide-react";
 
-type TodoItemProps = {
+interface TodoItemProps extends ComponentPropsWithoutRef<"div"> {
   todo: Todo;
   onCompletedChange: (id: number, completed: boolean) => void;
   onDelete: MouseEventHandler<HTMLButtonElement>;
-};
+}
 
 export const TodoItem: FC<TodoItemProps> = ({
   todo,

@@ -1,8 +1,8 @@
-import { FC, Fragment, HTMLAttributes } from "react";
+import { ComponentPropsWithoutRef, FC, Fragment } from "react";
 import { Todo } from "../../types/todo";
 import { TodoItem } from "..";
 
-interface TodoListProps extends HTMLAttributes<HTMLElement> {
+interface TodoListProps extends ComponentPropsWithoutRef<"div"> {
   todos: Todo[];
   onCompleteChange: (id: number, completed: boolean) => void;
   onDelete: (id: number) => void;

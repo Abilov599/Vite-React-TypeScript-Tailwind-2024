@@ -1,8 +1,8 @@
-import { FC, FormEvent, FormHTMLAttributes, useState } from "react";
+import { ComponentPropsWithoutRef, FC, FormEvent, useState } from "react";
 import { Button } from "..";
 
 interface AddTodoFormProps
-  extends Omit<FormHTMLAttributes<HTMLFormElement>, "onSubmit"> {
+  extends Omit<ComponentPropsWithoutRef<"form">, "onSubmit"> {
   onSubmit: (value: string) => void;
 }
 
